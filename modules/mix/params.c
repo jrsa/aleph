@@ -131,6 +131,12 @@ extern void fill_param_desc(ParamDesc* desc) {
   desc[eParam_cvSlew3].min = 0x00000000; 
   desc[eParam_cvSlew3].max = PARAM_SLEW_MAX;
   desc[eParam_cvSlew3].radix = 16; // doesn't matter
+
+  strcpy(desc[eParam_master].label, "masterVol");
+  desc[eParam_master].type = eParamTypeAmp; 
+  desc[eParam_master].min = 0x80000000; 
+  desc[eParam_master].max = PARAM_AMP_MAX;
+  desc[eParam_master].radix = 16; // doesn't matter
 }
 
 // EOF

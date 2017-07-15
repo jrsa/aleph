@@ -36,6 +36,8 @@ enum params {
   eParam_adc2,
   eParam_adc3,
 
+  eParam_master,
+
   eParamNumParams
 };
 

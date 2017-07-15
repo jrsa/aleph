@@ -76,6 +76,9 @@ static ParamData mParamData[eParamNumParams];
 static fract32 adcVal[4];
 static filter_1p_lo adcSlew[4];
 
+// volume paramater
+static fract32 masterVol = 0;
+
 
 // cv values (16 bits, but use fract32 and audio integrators)
 static fract32 cvVal[4];
@@ -150,6 +153,7 @@ void module_init(void) {
   param_setup(eParam_cvSlew3, PARAM_SLEW_DEFAULT);
 
 
+  param_setup(eParam_master, PARAM_AMP_MAX);
 
 }
 
@@ -196,6 +200,9 @@ void module_process_frame(void) {
   outBus = add_fr1x32( outBus, mult_fr1x32x32(in[1], adcVal[1]) );
   outBus = add_fr1x32( outBus, mult_fr1x32x32(in[2], adcVal[2]) );
   outBus = add_fr1x32( outBus, mult_fr1x32x32(in[3], adcVal[3]) );
+
+  // scale by masterVol
+  outBus = mult_fr1x32x32( outBus, masterVol );
 
   // copy the bus to all the outputs
   out[0] = outBus;
@@ -267,6 +274,10 @@ void module_set_param(u32 idx, ParamValue v) {
     break;
   case eParam_adcSlew3 :
     filter_1p_lo_set_slew(&(adcSlew[3]), v);
+    break;
+
+  case eParam_master :
+    masterVol = v;
     break;
 
   default:
