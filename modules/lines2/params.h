@@ -62,136 +62,31 @@
 
 // enumerate parameters
 enum params {
+  eParam_q00,
+  eParam_q01,
+  eParam_q02,
+  eParam_q10,
+  eParam_q11,
+  eParam_q12,
+  eParam_q20,
+  eParam_q21,
+  eParam_q22,
 
-  // xfade time
-  eParamFade0,
-  eParamFade1,
+  eParam_b0,
+  eParam_b1,
+  eParam_b2,
 
-  /// smoothers have to be processed first!
-  ////////////////////////////////
-  //// FIXME: not using these
-  eParamCut0Slew,
-  eParamRq0Slew,
-  eParamLow0Slew,
-  eParamHigh0Slew,
-  eParamBand0Slew,
-  eParamNotch0Slew,
+  eParam_c0,
+  eParam_c1,
+  eParam_c2,
 
-  eParamCut1Slew,
-  eParamRq1Slew,
-  eParamLow1Slew,
-  eParamHigh1Slew,
-  eParamBand1Slew,
-  eParamNotch1Slew,
-  //////////////////
+  eParam_g0,
+  eParam_g1,
+  eParam_g2,
 
-  eParamDry0Slew,
-  eParamWet0Slew,
-
-  eParamDry1Slew,
-  eParamWet1Slew,
-
-  // smoothing parameter for ALL mix values!
-  ////////////////////////////////
-  //// FIXME: not using this
-  eParamMixSlew,
-  ////////////////////////
-
-  // delay input mix
-  eParam_adc0_del0,		
-  eParam_adc0_del1,		
-  eParam_adc1_del0,		
-  eParam_adc1_del1,		
-  eParam_adc2_del0,		
-  eParam_adc2_del1,		
-  eParam_adc3_del0,		
-  eParam_adc3_del1,		
-
-  // delay output mix
-  eParam_del0_dac0,		
-  eParam_del0_dac1,		
-  eParam_del0_dac2,		
-  eParam_del0_dac3,		
-  eParam_del1_dac0,		
-  eParam_del1_dac1,		
-  eParam_del1_dac2,		
-  eParam_del1_dac3,		
-
-  // feedback mix
-  eParam_del0_del0,		
-  eParam_del0_del1,		
-  eParam_del1_del0,		
-  eParam_del1_del1,		
-
-  // dry
-  eParam_adc0_dac0,		
-  eParam_adc0_dac1,		
-  eParam_adc0_dac2,		
-  eParam_adc0_dac3,		
-  eParam_adc1_dac0,		
-  eParam_adc1_dac1,		
-  eParam_adc1_dac2,		
-  eParam_adc1_dac3,		
-  eParam_adc2_dac0,		
-  eParam_adc2_dac1,		
-  eParam_adc2_dac2,		
-  eParam_adc2_dac3,		
-  eParam_adc3_dac0,		
-  eParam_adc3_dac1,		
-  eParam_adc3_dac2,		
-  eParam_adc3_dac3,		
-
-    // cv
-  eParam_cvSlew3,
-  eParam_cvSlew2,
-  eParam_cvSlew1,
-  eParam_cvSlew0,
-
-  eParam_cvVal3,
-  eParam_cvVal2,
-  eParam_cvVal1,
-  eParam_cvVal0,
-
-
-  // line 1
-  eParam_freq1,		
-  eParam_rq1,			
-  eParam_low1,			
-  eParam_high1,			
-  eParam_band1,			
-  eParam_notch1,		
-  eParam_fwet1,			
-  eParam_fdry1,		    
-  eParam_pos_read1,	       
-  eParam_pos_write1,	       
-  eParam_run_read1,		
-  eParam_run_write1,	    
-  eParam_loop1,			
-  eParam_rMul1,			
-  eParam_rDiv1,		       
-  eParam_pre1,		       
-  eParam_write1,	       
-  eParam_delay1,	   
-
-  // line 0
-  eParam_freq0,		
-  eParam_rq0,			
-  eParam_low0,			
-  eParam_high0,			
-  eParam_band0,			
-  eParam_notch0,		
-  eParam_fwet0,			
-  eParam_fdry0,		    
-  eParam_pos_read0,	       
-  eParam_pos_write0,	       
-  eParam_run_read0,		
-  eParam_run_write0,	    
-  eParam_loop0,			
-  eParam_rMul0,			
-  eParam_rDiv0,		       
-  eParam_pre0,		       
-  eParam_write0,	       
-  eParam_delay0,	   
+  eParam_m0,
+  eParam_m1,
+  eParam_m2,
 
   eParamNumParams
 };  
